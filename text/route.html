@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <script src="../public/javascripts/angular-route.min.js"></script>
+    <script src="../public/javascripts/angular-animate.min.js"></script>
+    <script src="crtls.js"></script>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/mui.min.css">
+    <script src="route.js"></script>
+    <style>
+
+        .view-animate {
+            padding:10px;
+        }
+
+        .view-animate.ng-enter, .view-animate.ng-leave {
+            transition:left ease 1.5s;
+            position:absolute;
+            left:0;
+        }
+
+        .view-animate.ng-enter {
+            left:100%;
+        }
+        .view-animate.ng-enter.ng-enter-active {
+            left:0;
+        }
+        .view-animate.ng-leave.ng-leave-active {
+            left:-100%;
+        }
+    </style>
+</head>
+<body ng-app="myapp">
+
+    <div ng-view class="view-animate"></div>
+
+</div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-phone"></span>
+        <span class="mui-tab-label">电话</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-email"></span>
+        <span class="mui-tab-label">邮件</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>
+</body>
+</html>
